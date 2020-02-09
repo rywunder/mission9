@@ -12,6 +12,11 @@ services:
       # GUI settings
       - $HOME/.Xauthority:/root/.Xauthority:rw # Enable to allow GUIs on Linux (X-server only)
       - /tmp/.X11-unix:/tmp/.X11-unix # needed for GUI
+    devices:
+      - /dev:/dev
+      - /dev/video0:/dev/video0
+      - /dev/video1:/dev/video1
+      - /dev/video2:/dev/video2
     environment:
       - DISPLAY
       - QT_X11_NO_MITSHM=1yy
